@@ -15,6 +15,11 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
+p = st.chat_input()
+
+if p:
+    with st.chat_message("user"): 
+        st.write(p)
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
